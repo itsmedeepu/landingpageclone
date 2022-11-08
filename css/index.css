@@ -1,0 +1,256 @@
+/*root colors for webpage**/
+
+:root {
+  --bg: rgba(233, 233, 233, 0.25);
+  --main-color: #578ee4;
+  --sec-color: whitesmoke;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+/**navbar styles**/
+
+.navbar {
+  margin-top: 20px;
+}
+.navlinks {
+  display: inline-block;
+  background-color: var(--main-color);
+  padding: 20px;
+  float: right;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+}
+.navbar h1 {
+  display: inline-block;
+  padding: 20px;
+  margin-left: 60px;
+  font-weight: bolder;
+  color: var(--main-color);
+  font-size: 42px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.navlinks li {
+  display: inline-block;
+  margin-right: 80px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: var(--sec-color);
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.navlinks li a {
+  text-decoration: none;
+  color: var(--sec-color);
+}
+
+.navlinks input {
+  height: 28px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  width: 250px;
+  color: black;
+  opacity: 0.5;
+}
+.navlinks input:focus {
+  opacity: 0.9;
+}
+::placeholder {
+  color: gray;
+  opacity: 0.7;
+  padding: 10px;
+}
+
+.navlinks li a:hover {
+  opacity: 1;
+}
+
+.navlinks li a:before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: var(--sec-color);
+}
+
+.navlinks li a::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.navlinks li :hover::before {
+  width: 50px;
+}
+
+.search {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  color: grey;
+  opacity: 0.5;
+}
+
+/***styles for body**/
+
+.body {
+  display: flex;
+  margin-top: 80px;
+  margin-left: 60px;
+}
+
+.body .content {
+  width: auto;
+  height: auto;
+}
+
+.body .images {
+  width: 80%;
+  height: auto;
+}
+.body .images .img {
+  background-color: transparent;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 0px 3px 3px var(--main-color);
+  animation: slideup 3s ease-in;
+}
+.body .content h4 {
+  font-family: monospace;
+  font-size: 35px;
+  font-weight: bold;
+}
+.body .content h1 {
+  font-family: monospace;
+  font-size: 90px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.body .content h2 {
+  font-family: monospace;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.content {
+  position: relative;
+  animation: slideright 3s ease-out;
+}
+.body .content .main-cont {
+  margin-top: 20px;
+}
+
+.body .content .main-cont p {
+  width: 65%;
+  color: grey;
+  opacity: 0.7;
+}
+.body .content .main-cont .btn {
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--main-color);
+  box-shadow: 0px 0px 2px 1px var(--main-color);
+  font-weight: bolder;
+}
+.body .content .main-cont .btn-active {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  color: white;
+}
+.body .content .main-cont .btn:hover {
+  background-color: var(--main-color);
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+  transition: 2s background;
+}
+
+/*footer styles*/
+
+.footer {
+  margin-left: 60px;
+}
+
+.footer .fa-brands {
+  border: 1px solid var(--main-color);
+  margin-left: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  padding: 10px;
+  color: var(--main-color);
+  font-weight: bolder;
+  position: relative;
+  animation: slidedown 2s ease-in;
+}
+.footer .fa-brands:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+  opacity: 1;
+}
+
+/**live chat*/
+
+.live-chat {
+  width: 100px;
+  height: 100px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 100%;
+}
+
+.live-chat .fa-brands {
+  padding: 30px;
+  font-size: 40px;
+  color: white;
+}
+.live-chat .fa-brands:hover {
+  cursor: pointer;
+}
+
+/*animatons **/
+@keyframes slideup {
+  0% {
+    right: -600px;
+  }
+  50% {
+    right: 0px;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    bottom: -300px;
+  }
+  50% {
+    bottom: 0px;
+  }
+}
+
+@keyframes slideright {
+  0% {
+    left: -200px;
+  }
+  50% {
+    left: 0px;
+  }
+}
